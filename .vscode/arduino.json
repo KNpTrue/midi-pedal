@@ -1,0 +1,6 @@
+{
+    "sketch": "midiout.ino",
+    "port": "COM3",
+    "board": "Arduino_STM32:STM32F1:genericSTM32F103R",
+    "configuration": "device_variant=STM32F103RB,upload_method=STLinkMethod,cpu_speed=speed_72mhz,opt=osstd"
+}
