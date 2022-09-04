@@ -18,14 +18,14 @@ static int analogValue = 0;
 */
 typedef struct
 {
-	uint8_t header;
-	uint8_t byte1;
-	uint8_t byte2;
-	uint8_t byte3;
+	byte header;
+	byte byte1;
+	byte byte2;
+	byte byte3;
 } midiEventPacket_t;
 
 void controlChange(byte channel, byte control, byte value) {
-  midiEventPacket_t event = {0x0B, 0xB0 | channel, control, value};
+  midiEventPacket_t event = {0x0B, (byte)(channel | 0xB0), control, value};
   Serial1.write(event.header);
   Serial1.write(event.byte1);
   Serial1.write(event.byte2);
